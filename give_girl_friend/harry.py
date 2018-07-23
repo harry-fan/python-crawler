@@ -15,15 +15,15 @@ class MessageBox(QtWidgets.QWidget):
     CloseAllowed=0
     def __init__(self, parent=None):
         QtWidgets.QWidget.__init__(self)
-        self.setGeometry(300,300,800,800)
-        self.center()#居中函数
-        self.setFixedSize(self.width(), self.height())
+        self.setGeometry(300,300,800,800) # 设置主窗口大小
+        self.center()# 居中函数
+        self.setFixedSize(self.width(), self.height()) #限制窗口的控件大小
         self.setWindowTitle(u'hello, i am harry')
-        self.setWindowIcon(QIcon('1.png'))
+        self.setWindowIcon(QIcon('1.png')) # ICON 的背景图片
         self.setToolTip(u'我该说点什么')
-        QtWidgets.QToolTip.setFont(QFont('华文楷体', 40))
+        QtWidgets.QToolTip.setFont(QFont('华文楷体', 40)) #设置字体
         self.label1 = QtWidgets.QLabel(u'<b>小姐姐，我观察你很久了!</b>',self)
-        self.label1.move(150, 40)
+        self.label1.move(150, 40) #label1的摆放位置
         self.label1.setFont(QFont("Timers", 40))
         self.label2 = QtWidgets.QLabel(u'<b>做我女朋友好不好?</b>', self)
         self.label2.move(150,100)
@@ -35,7 +35,7 @@ class MessageBox(QtWidgets.QWidget):
 
         self.buttonOK = QtWidgets.QPushButton(u'同意',self)
         self.buttonOK.setFocusPolicy(QtCore.Qt.NoFocus) # 按钮无焦点
-        self.buttonOK.move(50,700)
+        self.buttonOK.move(50,700) # 摆放位置
         self.buttonOK.clicked.connect(self.showDialogOK)
 
         self.buttonE = QtWidgets.QPushButton(u'考虑考虑呗', self)
