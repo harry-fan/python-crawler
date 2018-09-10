@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 window = tk.Tk()
-window.title('小赖带我去成都逛窑子')
+window.title('login')
 window.geometry('650x350') #指定主窗体大小
 
 canvas = tk.Canvas(window, height=550, width=650)  # 绘图组件
@@ -22,7 +22,7 @@ var_usr_pwd=tk.StringVar()
 entry_usr_pwd = tk.Entry(window, textvariable=var_usr_pwd, show='*')
 entry_usr_pwd.place(x=260,y=220)
 def hit_me():
-    tk.messagebox.showinfo(title='HAHA', message='走，去逛窑子')
+    tk.messagebox.showinfo(title='HAHA', message='hhhhhhhhhhhh')
 
 button = tk.Button(window, text='点击我你就知道了', width=13, height=2, command=hit_me)
 button.pack()
